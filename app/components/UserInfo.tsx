@@ -1,12 +1,9 @@
 import Image from "next/image";
 
-type Props = {
-    avatar: string;
-};
-const UserInfo = ({ avatar}: Props) => {
+const UserInfo = () => {
     return (
         <div className="user-info">
-            <Image src={avatar} alt="avatar" width={32} height={32} className="avatar" />
+            <Image src='/avatar.gif' alt="avatar" width={32} height={32} className='user-info' unoptimized />
             <span>Andrian</span>
         </div>
     );

@@ -4,7 +4,7 @@ import React from 'react';
 const Menu = () => {
     return (
         <div>
-            <ul>
+            <ul className="menu">
                 <li><Link href={'/home'}>Home</Link></li>
 
                 <li><Link href={'/movies'}>Movies</Link></li>
