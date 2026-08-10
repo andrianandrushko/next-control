@@ -2,7 +2,6 @@ import Image from "next/image";
 
 type Props = {
     avatar: string;
-    name: string;
 };
 const UserInfo = ({ avatar}: Props) => {
     return (
