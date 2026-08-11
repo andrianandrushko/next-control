@@ -20,6 +20,12 @@ const MoviesPage = async ({ searchParams }: Props) => {
 
     return (
         <div>
+            <p className='sort'>Sort By:</p>
+            <div className='buttons'>
+                <button className='date'>Date</button>
+                <button className='popularity'>popularity</button>
+                <button className='rating'>rating</button>
+            </div>
             <MoviesList movies={movies} genres={genres} />
             <Pagination pg={pg} />
         </div>
