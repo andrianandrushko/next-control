@@ -6,7 +6,7 @@ type Props = {
 }
 const MovieInfo = async ({movie}:Props) => {
     return (
-        <div>
+        <div className="MovieInfo">
                 <div key={movie.id}>
                     <p>{movie.title}</p>
                     <p className={'overview'}><Image src='/description.png' alt="description" className={'description'}/> : {movie.overview}</p>
