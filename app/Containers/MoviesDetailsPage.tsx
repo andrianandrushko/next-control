@@ -3,7 +3,7 @@ import {getMovie} from "@/app/services/api.service";
 
 
 type Props = {
-    id: number;
+    id: string;
 }
 const MoviesDetailsPage = async ({id}:Props) => {
     const movie = await getMovie(id)
