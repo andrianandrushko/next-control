@@ -1,7 +1,10 @@
 
 import MoviesDetailsPage from "@/app/Containers/MoviesDetailsPage";
 type Props = {
-    id: string;
+    params:Promise<{
+        id: number;
+    }>
 }
-export default function Page({ id }: Props) {
-    return <MoviesDetailsPage id={id}/>}
+export default function Page({ params }: Props) {
+    const {id} =  params;
+    return <MoviesDetailsPage id={Number(id)}/>}
