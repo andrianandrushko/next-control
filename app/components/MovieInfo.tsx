@@ -8,7 +8,7 @@ const MovieInfo = async ({movie}:Props) => {
     return (
         <div className="MovieInfo">
                 <div key={movie.id}>
-                    <p>{movie.title}</p>
+                    <p className='title'>{movie.title}</p>
                     <p className='overview'><Image src='/description.gif' alt="description" width={70} height={5} className={'description'}/> : {movie.overview}</p>
                 </div>
         </div>

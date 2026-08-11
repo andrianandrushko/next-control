@@ -119,6 +119,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+.MovieInfo{
+  display: flex;
+  margin-top: 10px;
+}
+.title{
+  margin-bottom: 10px;
+}
 
 .MoviesListCard {
   background : cadetblue;
