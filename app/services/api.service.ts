@@ -24,13 +24,13 @@ export async function getGenres(): Promise<IGenre[]> {
     return data.genres;
 }
 
-export async function getMovie(id: number): Promise<IMovie> {
+export async function getMovie(id: string): Promise<IMovie> {
     const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, {
         headers: { Authorization: `Bearer ${MYTOKEN}` },
         next: { revalidate: 3600 },
     })
     const data = await res.json();
-    return data.results;
+    return data;
 }
 
 export async function getSearch(q: string): Promise<IMovie[]> {

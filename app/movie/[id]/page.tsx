@@ -2,9 +2,9 @@
 import MoviesDetailsPage from "@/app/Containers/MoviesDetailsPage";
 type Props = {
     params:Promise<{
-        id: number;
+        id: string;
     }>
 }
-export default function Page({ params }: Props) {
-    const {id} =  params;
+export default async function Page  ({ params }: Props) {
+    const {id} = await params;
     return <MoviesDetailsPage id={Number(id)}/>}

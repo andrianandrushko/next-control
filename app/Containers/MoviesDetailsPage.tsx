@@ -3,12 +3,10 @@ import {getMovie} from "@/app/services/api.service";
 
 
 type Props = {
-    params: Promise<{
-        id: number;
-    }>;
+    id: number;
 }
-const MoviesDetailsPage = async ({params}:Props) => {
-    const movie = await getMovie(params)
+const MoviesDetailsPage = async ({id}:Props) => {
+    const movie = await getMovie(id)
     return (
             <div className="MoviesDetailsPage">
                 <p>id:{movie.id}</p>
@@ -25,7 +23,7 @@ const MoviesDetailsPage = async ({params}:Props) => {
                 <p>original_title:{movie.original_title}</p>
                 <p>adult:{movie.adult ? 'Yes' : 'No'}</p>
                 <p>video:{movie.video ? 'Yes' : 'No'}</p>
-            </div>
+                </div>
         )
 }
 
