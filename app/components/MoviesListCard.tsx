@@ -11,11 +11,14 @@ type Props = {
     genres:IGenre[];
 }
 const MoviesListCard = ({movie, genres}:Props) => {
+    const movieGenres = genres.filter((genre) =>
+        movie.genre_ids.includes(genre.id)
+    )
     return (
         <div className="MoviesListCard">
             <PosterPreview poster_path={movie.poster_path}/>
             <MovieInfo movie={movie}/>
-            <GenreBadge genres={genres}/>
+            <GenreBadge genres={movieGenres}/>
             <StarsRating rating={movie.vote_average}/>
             <Link href={`/movie/${movie.id}`}>
                 <button className='details'>Details</button>

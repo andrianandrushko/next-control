@@ -9,7 +9,7 @@ const GenreBadge = ({genres}:Props) => {
             {
             genres.map(genre => (
                 <div key={genre.id}>
-                    <p>genre name:{genre.name}</p>
+                    <p className='genre'>genre name:{genre.name}</p>
                 </div>
             ))
             }
