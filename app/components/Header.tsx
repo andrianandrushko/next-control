@@ -11,7 +11,7 @@ const Header = () => {
             </div>
             <Menu />
             <div className="right-group">
-                <form  className="search">
+                <form action={'/movies'}  className="search">
                     <input
                         type="text"
                         name="q"

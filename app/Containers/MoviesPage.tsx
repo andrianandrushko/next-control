@@ -1,20 +1,26 @@
 import MoviesList from "@/app/components/MoviesList";
-import { getGenres, getMovies } from "@/app/services/api.service";
+import {getGenres, getMovies, getSearch} from "@/app/services/api.service";
 import Pagination from "@/app/Paginations/pagination";
 
 type Props = {
     searchParams: Promise<{
         pg?: string;
+        q?: string;
     }>;
 };
 
 const MoviesPage = async ({ searchParams }: Props) => {
-    const { pg = "1" } = await searchParams;
+    const params = await searchParams;
+
+    const pg = params.pg || "1";
+    const q = params.q || "";
+
+    console.log(params.q);
 
     const page = Number(pg);
 
     const [movies, genres] = await Promise.all([
-        getMovies(page),
+        q ? getSearch(q) : getMovies(page),
         getGenres(),
     ]);
 

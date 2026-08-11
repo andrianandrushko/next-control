@@ -3,6 +3,7 @@ import MoviesPage from "@/app/Containers/MoviesPage";
 type Props = {
     searchParams: Promise<{
         pg?: string;
+        q?: string;
     }>;
 };
 
