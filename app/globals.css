@@ -549,3 +549,9 @@
 .genre{
   margin-top: 20px;
 }
+.MoviesDetailsPage{
+  margin-top: 60px;
+  border: 1px solid slateblue;
+  background-color: slateblue;
+  color: white;
+}
