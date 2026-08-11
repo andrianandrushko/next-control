@@ -10,8 +10,8 @@ const MoviesList = ({movies, genres}:Props) => {
     return (
         <div className="MoviesList">
             {
-                movies.map(movie => (
-                    <MoviesListCard key={movie.id} movie={movie} genres={genres} />
+                 movies.map(movie => (
+                    <MoviesListCard key={movie.id} movie={movie} genres={genres}  />
                 ))
             }
             
