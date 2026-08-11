@@ -7,7 +7,7 @@ type Props = {
 const PosterPreview = ({ poster_path }: Props) => {
     return (
         <div>
-            <Image className='img' src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="Movie poster" width={500} height={750} unoptimized/>
+            <Image  src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="Movie poster" width={600} height={700} unoptimized/>
         </div>
     );
 };
