@@ -1,6 +1,6 @@
 import MoviesList from "@/app/components/MoviesList";
 import {getGenres, getMovies, getSearch} from "@/app/services/api.service";
-import Pagination from "@/app/Paginations/pagination";
+import Pagination from "@/app/Pagination/pagination";
 import Link from "next/link";
 
 type Props = {
