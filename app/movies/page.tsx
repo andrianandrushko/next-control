@@ -4,6 +4,7 @@ type Props = {
     searchParams: Promise<{
         pg?: string;
         q?: string;
+        sortBy?: string;
     }>;
 };
 
