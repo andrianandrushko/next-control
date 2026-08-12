@@ -7,9 +7,19 @@
   padding: 20px 30px;
   background-color: silver;
   border-radius: 15px;
+  animation: fadeInScale 0.5s ease-out;
   color: white;
 }
-
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .logo {
   color: black;
   display: flex;
