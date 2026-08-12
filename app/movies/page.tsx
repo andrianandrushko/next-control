@@ -5,6 +5,7 @@ type Props = {
         pg?: string;
         q?: string;
         sortBy?: string;
+        genreId?: string;
     }>;
 };
 

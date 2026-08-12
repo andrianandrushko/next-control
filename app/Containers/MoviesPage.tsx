@@ -8,6 +8,7 @@ type Props = {
         pg?: string;
         q?: string;
         sortBy?: string;
+        genreId?: string;
     }>;
 };
 
@@ -17,12 +18,13 @@ const MoviesPage = async ({ searchParams }: Props) => {
     const pg = params.pg || "1";
     const q = params.q || "";
     const sortBy = params.sortBy || 'popularity.desc';
+    const genreId = params.genreId ? Number(params.genreId) : undefined;
 
 
     const page = Number(pg);
 
     const [movies, genres] = await Promise.all([
-        q ? getSearch(q) : getMovies(page, sortBy),
+        q ? getSearch(q) : getMovies(page, sortBy, genreId),
         getGenres(),
     ]);
 
@@ -50,24 +52,23 @@ const MoviesPage = async ({ searchParams }: Props) => {
             </div>
             <p className='sort-genres'>Sort By Genres:</p>
             <div className='buttons-gen'>
-                <button className='action'>Action</button>
-                <button className='adventure'>Adventure</button>
-                <button className='animation'>Animation</button>
-                <button className='comedy'>Comedy</button>
-                <button className='crime'>Crime</button>
-                <button className='drama'>Drama</button>
-                <button className='horror'>Horror</button>
-                <button className='documentary'>Documentary</button>
-                <button className='family'>Family</button>
-                <button className='fantasy'>Fantasy</button>
-                <button className='history'>History</button>
-                <button className='music'>Music</button>
-                <button className='mystery'>Mystery</button>
-                <button className='romance'>Romance</button>
-                <button className='thriller'>Thriller</button>
-                <button className='war'>War</button>
-                <button className='western'>Western</button>
-                <button className='tv'>TV</button>
+                <Link href='?genreId=28' className='action'>Action</Link>
+                <Link href='?genreId=12' className='adventure'>Adventure</Link>
+                <Link href='?genreId=16' className='animation'>Animation</Link>
+                <Link href='?genreId=35' className='comedy'>Comedy</Link>
+                <Link href='?genreId=80' className='crime'>Crime</Link>
+                <Link href='?genreId=18' className='drama'>Drama</Link>
+                <Link href='?genreId=27' className='horror'>Horror</Link>
+                <Link href='?genreId=99' className='documentary'>Documentary</Link>
+                <Link href='?genreId=10751' className='family'>Family</Link>
+                <Link href='?genreId=14' className='fantasy'>Fantasy</Link>
+                <Link href='?genreId=36' className='history'>History</Link>
+                <Link href='?genreId=10402' className='music'>Music</Link>
+                <Link href='?genreId=9648' className='mystery'>Mystery</Link>
+                <Link href='?genreId=10749' className='romance'>Romance</Link>
+                <Link href='?genreId=53' className='thriller'>Thriller</Link>
+                <Link href='?genreId=10752' className='war'>War</Link>
+                <Link href='?genreId=37' className='western'>Western</Link>
             </div>
             <MoviesList movies={movies} genres={genres} />
             <Pagination pg={pg} />
