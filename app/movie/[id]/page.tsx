@@ -1,5 +1,6 @@
 
 import MoviesDetailsPage from "@/app/Containers/MoviesDetailsPage";
+
 type Props = {
     params:Promise<{
         id: string;
@@ -7,5 +8,5 @@ type Props = {
 }
 export default async function Page({ params }: Props) {
     const {id} = await params;
-    return <MoviesDetailsPage id={Number(id)}/>
+    return <MoviesDetailsPage id={id}/>
 }
