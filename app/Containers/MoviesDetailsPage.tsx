@@ -1,4 +1,3 @@
-import React from 'react';
 import {getMovie} from "@/app/services/api.service";
 
 
