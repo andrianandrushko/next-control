@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from "next/image";
 type Props = {
     rating: number;
@@ -6,7 +5,7 @@ type Props = {
 const StarsRating = ({rating}:Props) => {
     return (
         <div className='stars-rating'>
-          <Image src='/star.gif' alt="star" width={32} height={32} className='star-info' unoptimized />{rating}</div>
+          <Image src='/star.gif' alt="star" width={32} height={32} className='star-info'/>{rating}</div>
     );
 };
 
