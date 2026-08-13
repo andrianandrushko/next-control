@@ -45,7 +45,7 @@ const MoviesPage = async ({ searchParams }: Props) => {
                     </Link>
 
                     <Link
-                    href={'?sortBy=vote_average.desc'}
+                    href='?sortBy=vote_average.desc'
                     className='rating'>
                         rating
                     </Link>
