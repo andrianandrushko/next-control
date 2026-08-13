@@ -4,13 +4,24 @@ import {IGenre} from "@/src/models/IGenre";
 
 const MYTOKEN = process.env.TMDB_API_TOKEN;
 
-export async function getMovies(page: number = 1, sortBy: string = 'popularity.desc', genreId: number = 14): Promise<IMovie[]> {
-    const res = await fetch(`https://api.themoviedb.org/3/discover/movie?page=${page}&sort_by=${sortBy}&with_genres=${genreId}`, {
-        headers: { Authorization: `Bearer ${MYTOKEN}` },
-        next: { revalidate: 3600 },
-    });
+export async function getMovies(page: number = 1, sortBy: string = "popularity.desc", genreId?: number): Promise<IMovie[]> {
+
+    const genreParam = genreId ? `&with_genres=${genreId}` : "";
+
+    const res = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?page=${page}&sort_by=${sortBy}${genreParam}`,
+        {
+            headers: {
+                Authorization: `Bearer ${MYTOKEN}`,
+            },
+            next: {
+                revalidate: 3600,
+            },
+        }
+    );
 
     const data = await res.json();
+
     return data.results;
 }
 

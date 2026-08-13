@@ -1,10 +1,10 @@
 import {IMovie} from "@/src/models/IMovie";
 import {IGenre} from "@/src/models/IGenre";
-import PosterPreview from "@/src/components/PosterPreview";
-import MovieInfo from "@/src/components/MovieInfo";
-import StarsRating from "@/src/components/StarsRating";
+import PosterPreview from "@/src/components/PosterPreview/PosterPreview";
+import MovieInfo from "@/src/components/MovieInfo/MovieInfo";
+import StarsRating from "@/src/components/StarsRating/StarsRating";
 import Link from "next/link";
-import GenreBadge from "@/src/components/GenreBadge";
+import GenreBadge from "@/src/components/GenreBadge/GenreBadge";
 type Props = {
     movie:IMovie;
     genres:IGenre[];
