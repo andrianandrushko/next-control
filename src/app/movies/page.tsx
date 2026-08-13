@@ -1,4 +1,4 @@
-import MoviesPage from "@/src/Containers/MoviesPage";
+import MoviesPage from "@/src/сontainers/MoviesPage";
 
 type Props = {
     searchParams: Promise<{

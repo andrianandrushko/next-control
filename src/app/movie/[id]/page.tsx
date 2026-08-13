@@ -1,5 +1,5 @@
 
-import MoviesDetailsPage from "@/src/Containers/MoviesDetailsPage";
+import MoviesDetailsPage from "@/src/сontainers/MoviesDetailsPage";
 
 type Props = {
     params:Promise<{
