@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Menu from "@/app/menu/Menu";
 import UserInfo from "@/app/components/UserInfo";
+import Form from "next/form";
 
 const Header = () => {
     return (
@@ -11,17 +12,18 @@ const Header = () => {
             </div>
             <Menu />
             <div className="right-group">
-                <form action={'/movies'}  className="search">
+                <Form action={'/movies'}  className="search">
                     <input
                         type="text"
                         name="q"
                         placeholder="Search movies..."
+                        aria-label="Search movies"
                         className="search-input"
                     />
                     <button type="submit" className="button">
                         Search
                     </button>
-                </form>
+                </Form>
                 <UserInfo />
             </div>
         </header>
