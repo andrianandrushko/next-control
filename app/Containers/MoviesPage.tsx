@@ -32,20 +32,20 @@ const MoviesPage = async ({ searchParams }: Props) => {
         <div>
             <p className='sort'>Sort By:</p>
             <div className='buttons'>
-                    <Link
-                        href='?sortBy=release_date.desc'
-                        className='date'>
-                        date
-                    </Link>
+                <Link
+                    href={`?sortBy=release_date.desc&genreId=${genreId}&q=${q}`}
+                    className='date'>
+                    date
+                </Link>
 
                     <Link
-                    href='?sortBy=popularity.desc'
+                    href={`?sortBy=popularity.desc&genreId=${genreId}&q=${q}`}
                     className='popularity'>
                         popularity
                     </Link>
 
                     <Link
-                    href={'?sortBy=vote_average.desc'}
+                    href={`?sortBy=vote_average.desc&genreId=${genreId}&q=${q}`}
                     className='rating'>
                         rating
                     </Link>
