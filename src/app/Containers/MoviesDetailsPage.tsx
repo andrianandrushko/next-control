@@ -1,4 +1,4 @@
-import {getMovie} from "@/app/services/api.service";
+import {getMovie} from "@/src/app/services/api.service";
 
 
 

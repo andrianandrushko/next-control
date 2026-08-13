@@ -1,4 +1,4 @@
-import {IMovie} from "@/app/models/IMovie";
+import {IMovie} from "@/src/app/models/IMovie";
 import Image from "next/image";
 type Props = {
     movie:IMovie;
