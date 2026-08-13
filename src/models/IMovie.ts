@@ -1,3 +1,5 @@
+import { IGenre } from "./IGenre";
+
 export interface IMovie {
     id: number;
     title: string;
@@ -9,6 +11,7 @@ export interface IMovie {
     vote_count: number;
     popularity: number;
     genre_ids: number[];
+    genres: IGenre[];
     original_language: string;
     original_title: string;
     adult: boolean;

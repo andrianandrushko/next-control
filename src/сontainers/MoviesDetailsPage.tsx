@@ -1,4 +1,8 @@
 import {getMovie} from "@/src/services/api.service";
+import GenreBadge from "@/src/components/GenreBadge/GenreBadge";
+import StarsRating from "@/src/components/StarsRating/StarsRating";
+import MovieInfo from "@/src/components/MovieInfo/MovieInfo";
+import PosterPreview from "@/src/components/PosterPreview/PosterPreview";
 
 
 
@@ -9,11 +13,10 @@ const MoviesDetailsPage = async ({id}:Props) => {
     const movie = await getMovie(id)
     return (
             <div className="MoviesDetailsPage">
-                <p>id:{movie.id}</p>
-                <p>title:{movie.title}</p>
-                <p>overview:{movie.overview}</p>
-                <p>poster_path:{movie.poster_path}</p>
-                <p>backdrop_path:{movie.backdrop_path}</p>
+                <PosterPreview poster_path={movie.poster_path} />
+                <MovieInfo movie={movie} />
+                <StarsRating rating={movie.vote_average} />
+                <GenreBadge genres={movie.genres} />
                 <p>release_date:{movie.release_date}</p>
                 <p>vote_average:{movie.vote_average}</p>
                 <p>vote_count:{movie.vote_count}</p>
