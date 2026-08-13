@@ -1,6 +1,6 @@
 import "server-only";
-import {IMovie} from "@/src/app/models/IMovie";
-import {IGenre} from "@/src/app/models/IGenre";
+import {IMovie} from "@/src/models/IMovie";
+import {IGenre} from "@/src/models/IGenre";
 
 const MYTOKEN = process.env.TMDB_API_TOKEN;
 

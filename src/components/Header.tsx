@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Menu from "@/src/app/menu/Menu";
-import UserInfo from "@/src/app/components/UserInfo";
+import Menu from "@/src/menu/Menu";
+import UserInfo from "@/src/components/UserInfo";
 import Form from "next/form";
 
 const Header = () => {

@@ -1,6 +1,6 @@
-import {IMovie} from "@/src/app/models/IMovie";
-import {IGenre} from "@/src/app/models/IGenre";
-import MoviesListCard from "@/src/app/components/MoviesListCard";
+import {IMovie} from "@/src/models/IMovie";
+import {IGenre} from "@/src/models/IGenre";
+import MoviesListCard from "@/src/components/MoviesListCard";
 type Props = {
     movies: IMovie[];
     genres: IGenre[];

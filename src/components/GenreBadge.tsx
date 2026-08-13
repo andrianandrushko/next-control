@@ -1,4 +1,4 @@
-import {IGenre} from "@/src/app/models/IGenre";
+import {IGenre} from "@/src/models/IGenre";
 type Props = {
     genres: IGenre[];
 }
