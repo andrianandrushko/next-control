@@ -53,8 +53,8 @@ const MoviesPage = async ({ searchParams }: Props) => {
             <p className='sort-genres'>Sort By Genres:</p>
             <div className='buttons-gen'>
                 <Link href='?genreId=28' className='action'>Action</Link>
-                <Link href='?genreId=12' className='adventure'>Adventure</Link>
                 <Link href='?genreId=16' className='animation'>Animation</Link>
+                <Link href='?genreId=12' className='adventure'>Adventure</Link>
                 <Link href='?genreId=35' className='comedy'>Comedy</Link>
                 <Link href='?genreId=80' className='crime'>Crime</Link>
                 <Link href='?genreId=18' className='drama'>Drama</Link>
