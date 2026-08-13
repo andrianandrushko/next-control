@@ -1,18 +1,12 @@
 import {getMovie} from "@/app/services/api.service";
-import {notFound} from "next/navigation";
+
 
 
 type Props = {
-    params: Promise<{ id: string }>;
+    id: string
 }
-const MoviesDetailsPage = async ({params}:Props) => {
-    const {id} = await params
+const MoviesDetailsPage = async ({id}:Props) => {
     const movie = await getMovie(id)
-
-    if (!movie){
-        notFound()
-    }
-
     return (
             <div className="MoviesDetailsPage">
                 <p>id:{movie.id}</p>
