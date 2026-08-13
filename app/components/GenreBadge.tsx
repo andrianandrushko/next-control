@@ -1,4 +1,3 @@
-import React from 'react';
 import {IGenre} from "@/app/models/IGenre";
 type Props = {
     genres: IGenre[];
@@ -13,7 +12,6 @@ const GenreBadge = ({genres}:Props) => {
                 </div>
             ))
             }
-
         </div>
     );
 };
