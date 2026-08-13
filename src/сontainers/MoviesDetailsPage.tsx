@@ -21,7 +21,7 @@ const MoviesDetailsPage = async ({id}:Props) => {
                 <p>vote_average:{movie.vote_average}</p>
                 <p>vote_count:{movie.vote_count}</p>
                 <p>popularity:{movie.popularity}</p>
-                <p>genre_ids:{movie.genre_ids}</p>
+                <p>genre_ids: {movie.genres.map(genre => genre.id).join(", ")}</p>
                 <p>original_language:{movie.original_language}</p>
                 <p>original_title:{movie.original_title}</p>
                 <p>adult:{movie.adult ? 'Yes' : 'No'}</p>

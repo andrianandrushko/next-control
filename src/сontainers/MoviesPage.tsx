@@ -27,20 +27,25 @@ const MoviesPage = async ({ searchParams }: Props) => {
     const createUrl = (key: string, value: string) => {
         const newParams = new URLSearchParams();
 
-        Object.entries(params).forEach(([key, value]) => {
-            if (value) {
-                newParams.set(key, value);
+        Object.entries(params).forEach(([paramKey, paramValue]) => {
+            if (paramValue) {
+                newParams.set(paramKey, paramValue);
             }
         });
 
         newParams.set(key, value);
+        newParams.set("pg", "1");
+
+        if (key === "genreId" || key === "sortBy") {
+            newParams.delete("q");
+        }
 
         return `?${newParams.toString()}`;
     };
 
     const [movies, genres] = await Promise.all([
         q
-            ? getSearch(q)
+            ? getSearch(q,page)
             : getMovies(page, sortBy, genreId),
         getGenres(),
     ]);
